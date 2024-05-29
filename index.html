@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" type="icon" href="2899445.png">
+
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="css/webfonts/all.min.css">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- my css link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <section id="home" class="home">
+        <div class="container">
+
+            <header class="d-flex  flex-column align-items-center my-4">
+                <h1>Bookmarker</h1>
+                <p>Bookmark your favorite sites</p>
+            </header>
+
+            <div class="form">
+
+            <div class="mb-3">
+                <label for="siteName" class="form-label"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                <input oninput="checkInput(this);"  type="text" class="form-control" id="siteName" placeholder="Bookmark Name" required>
+                <div class="alert alert-danger p-1 my-2 d-none">
+                    <small>your bookmark must start with "alphabet"</small>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="url" class="form-label"><i class="fa-solid fa-link"></i> Site URL</label>
+                <input oninput="checkInput(this);" type="text" class="form-control" id="url" placeholder="Website URL" required>
+                <div class="alert alert-danger p-1 my-2 d-none">
+                    <small>your website must start with "www."</small>
+                </div>
+            </div>
+            <div class="text-center my-4">
+                <button onclick="addTable()" class="my-btn">Save Bookmark</button>
+            </div>
+            </div>
+
+            <div class="table-group my-5">
+                <input oninput="searchInput(this);" class="my-3 p-2 rounded focus-ring" id="search" type="text" placeholder="Search..." >
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Website Name</th>
+                            <th>Visit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tableBody" id="tableBody">
+                        <!-- <tr>
+                            <th>1</th>
+                            <td>www.google.com</td>
+                            <td><a href="#" ><i class="fa-regular fa-eye"></i> Visit</a></td>
+                            <td><button><i class="fa-solid fa-trash-can"></i> Delete</button></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- js bootstrap file link  -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- js file  -->
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(18, 17, 26);
+    color: blueviolet;
+}
+
+.home h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 3px blueviolet;
+    position: relative;
+    overflow: hidden;
+}
+
+.home h1::before{
+    content: "Bookmarker";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    border-right: 3px solid blueviolet;
+    color: blueviolet;
+    transition: all 0.5s ease;
+}
+
+.home h1:hover::before{
+    width: 100%;
+}
+
+.home header p{
+    font-size: 1.1875rem;
+}
+
+.my-btn{
+    background-color: blueviolet;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.my-btn:hover{
+    background-color: rgb(47, 7, 83);
+}
+
+.my-btn:active{
+    transform: translateY(2px);
+}
+
+.home table a, .home table button{
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+}
+
+.home table a{
+    background-color: green;
+}
+.home table button{
+    background-color: red;
+}
